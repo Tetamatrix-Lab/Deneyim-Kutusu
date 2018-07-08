@@ -1,0 +1,116 @@
+<resources>
+    <!--Çevirilecek kısımlar -->
+    <!--<string>......Burası....</string>-->
+
+    <string name="app_name">Deneyim Kutusu</string>
+    <string name="navigation_drawer_open">Drawer açılması</string>
+    <string name="navigation_drawer_close">Drawer kapanması</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="title_activity_profile">Deneyim Kutusu</string>
+    <string name="title_activity_login">Giriş</string>
+    <string name="title_activity_register">Kayıt</string>
+    <string name="title_activity_post">Deneyim Kutusu</string>
+    <string name="title_activity_reset_password">Şifre sıfırlama</string>
+
+    <!--Anasayfa-->
+    <string name="basmak_gerek">Uygulamadan çıkmak için birkez daha basınız</string>
+
+    <!--Login sayfasi-->
+    <string name="mail_giris">Lütfen eposta adresinizi giriniz!</string>
+    <string name="sifre_giris">Lütfen şifrenizi giriniz!</string>
+    <string name="sifre_uzunluk">Şifreniz en az 6 karakter uzunluğunda olmalıdır!</string>
+    <string name="giris_hatasi">Oturum açma başarısız.Lütfen mail ve şifrenizi kontrol ediniz!</string>
+    <string name="email">E-posta</string>
+    <string name="sifre">Şifre</string>
+    <string name="giris">Giriş</string>
+    <string name="sifrenimi_unuttun">Şifreni mi unuttun?</string>
+    <string name="kayit_ol">Kayıt Ol!</string>
+
+    <!--Register sayfasi-->
+    <string name="hesap_bulunamadi">Hesap bulunamadı.Girilen bilgileri kontrol ediniz!</string>
+
+    <!--Reset password sayfasi-->
+    <string name="kayitli_email">Kayıt olduğunuz email adresini giriniz!</string>
+    <string name="kayitli_email_gonder">Şifre sıfırlama linkiniz email adresinize gönderilmiştir!</string>
+    <string name="kayitli_email_gonder_hata">Girilen emaile gönderme işlemi başarısız!</string>
+    <string name="sifre_sifirlama">Şifre sıfırlama işlemi için kayıtlı olduğunuz e-posta adresinizi giriniz.</string>
+    <string name="sifirlama">Şifreyi sıfırla</string>
+    <string name="btn_back"><![CDATA[<< Geri]]></string>
+
+    <!--Konum ile ilgili-->
+    <string name="konum_bekleniyor">Konum servisi bekleniyor..!</string>
+    <string name="konum_bilgisi_alınıyor">Konum bilgisi alınıyor..!</string>
+    <string name="konum_servisi_kontrol">Lütfen konum servislerini ve internetinizi kontrol ediniz..!</string>
+
+    <!--Upload sayfası-->
+    <string name="yaziniz_yuklendi">Yazınız yayınlandı..!</string>
+    <string name="kullanicibilgisi_cekilemedi">Kullanıcı bilgileri çekilemedi..!</string>
+    <string name="ilkresim_bos">Yazı resmi boş bırakılamaz..!</string>
+    <string name="dialog">Kategori oluşturunuz</string>
+    <string name="dialog_kategori_bos">Kategori ismini boş bırakmayınız.!</string>
+    <string name="crop_baslik">Kırpma işlemi</string>
+    <string name="crop_onayla">Onayla</string>
+    <string name="snackbar_update">Lütfen tüm bilgileri doldurunuz..!</string>
+    <string name="konum_bulmayi_dene">Lütfen ilk önce konum bulmayı deneyiniz</string>
+    <!--Profil Oluşturma-->
+    <string name="profil_olusturuldu">Profiliniz oluşturuldu</string>
+    <string name="profil_resmi_sec">Lütfen bir profil resmi seçiniz</string>
+    <string name="profil_resmi_secildi">Profil resminiz seçildi</string>
+
+    <!--popup ekranı-->
+    <string name="yorum">Yorumunuz</string>
+    <string name="ad">Ad</string>
+    <!--Update ekranı-->
+    <string name="baslik">Yazı başlığı</string>
+    <string name="konum_degistir">Konumunu Değiştir</string>
+    <string name="icerik_konumu">İçerik Konumu</string>
+    <string name="icerik_kategorisi">İçerik kategorisi</string>
+    <string name="post_kategorisi">Kategori</string>
+    <string name="genel_deneyimler">Deneyimlenenler</string>
+    <string name="gelen_deneyimler">Deneyimlenenler</string>
+    <string name="farkli_konum_ekle">Farklı bir konum ekleyin</string>
+    <string name="ek_icerik">*Ek İçerik</string>
+    <string name="guncelle">Güncelle</string>
+    <!--Upload ekranı-->
+    <string name="konumumu_bul">Konumumu bul</string>
+    <string name="bulunan_konum">Bulunan Konum</string>
+    <string name="deneyimini_paylas">Deneyimlerinizi paylaşınız</string>
+    <string name="yukle">Paylaş</string>
+    <string name="yorum_bos">Boş yorum yapılamaz</string>
+    <!--profil oluştur-->
+    <string name="isimisim">İsim</string>
+    <string name="soyisim">Soyisim</string>
+    <string name="ulke">Ülke</string>
+    <string name="sehir">Şehir</string>
+    <string name="profil_icerigi">Profil İçeriği</string>
+    <string name="profil_resmi">Profil resmi</string>
+    <string name="olustur">Oluştur</string>
+    <!--Kayıt ol-->
+    <string name="kaydol">Kaydol</string>
+    <string name="zaten_uye">Zaten üyemisin giriş yap!</string>
+    <!--Post içerik-->
+    <string name="kategori_alt_kategori">Kategori/Alt kategori</string>
+    <string name="yol_tarifi">Yol tarifi al</string>
+    <string name="yorumlar">Yorumlar</string>
+    <string name="yorumunuz">Yorumunuz</string>
+    <!--Profil sayfası-->
+    <string name="inceleme">İnceleme</string>
+    <string name="rutbe">Rütbe</string>
+    <string name="isim_soyisim">İsim Soyisim</string>
+    <string name="ulke_sehir">Şehir/Ülke</string>
+    <string name="kategori_k">Kategori ismi</string>
+    <string name="kategori_iptal">İptal</string>
+    <string name="kategori_onay">Oluştur</string>
+    <!--Beğenenler-->
+    <string name="begenenler">Beğenen Kişiler</string>
+    <string name="kapat">Kapat</string>
+    <!--Home_row_layout-->
+    <string name="icerik_konum">İçeri konumu</string>
+    <string name="tarih">Tarih</string>
+    <!--Firabase Stringleri-->
+    <string name="action_sign_in_short">Kayıt</string>
+    <string name="minimum_password">Şifren çok kısa en az 6 karakter olmalı!</string>
+    <string name="hesabınız_kaldırıldı">Hesabınız kaldırıldı.</string>
+    <string name="hesabi_kaldir">Hesabı kaldır.</string>
+
+</resources>

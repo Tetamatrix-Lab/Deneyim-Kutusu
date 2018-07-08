@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_education"
+            android:icon="@drawable/education"
+            android:title="Eğitim" />
+        <item
+            android:id="@+id/nav_job"
+            android:icon="@drawable/job"
+            android:title="İş" />
+        <item
+            android:id="@+id/nav_travel"
+            android:icon="@drawable/travel"
+            android:title="Turistik" />
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/food"
+            android:title="Yemekler" />
+        <item
+            android:id="@+id/nav_country"
+            android:icon="@drawable/country"
+            android:title="Ülkelere göre" />
+    </group>
+
+    <item android:title="Diğer">
+        <menu>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/logout"
+                android:title="Çıkış" />
+        </menu>
+    </item>
+
+</menu>

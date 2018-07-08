@@ -1,0 +1,48 @@
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="45dp"
+                android:layout_height="45dp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:hint="isim"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/imageView11"
+                android:hint="@string/yorumlar"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/yorum_spinner_text"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="0dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/textView28"
+                android:background="@drawable/vertical_menu_icon"/>
+        </RelativeLayout>
+</android.support.v7.widget.CardView>

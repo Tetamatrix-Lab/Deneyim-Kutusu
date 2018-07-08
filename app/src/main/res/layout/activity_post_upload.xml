@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context="deneyimkutusu.xedoxsoft.deneyimkutusu.Post.PostUpload">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/postUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/uploadRelative"
+                android:layout_width="match_parent"
+                android:padding="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@android:color/transparent"
+                    android:padding="30dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/upload_icon"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/forsquareRelative"
+                android:layout_width="270dp"
+                android:layout_height="52dp"
+                android:layout_margin="9dp"
+                android:layout_below="@id/uploadRelative"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/bulunan_konum"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/pickUpTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/konumumu_bul"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="10dp"
+                    mapbox:srcCompat="@android:drawable/ic_search_category_default" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/help_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/forsquareRelative"
+                android:layout_below="@id/uploadRelative"
+                android:layout_marginTop="20dp"
+                mapbox:srcCompat="@android:drawable/ic_menu_help" />
+            <ImageView
+                android:id="@+id/upld_imageView_clear"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                mapbox:srcCompat="@android:drawable/ic_delete" />
+
+            <EditText
+                android:id="@+id/bulunamayanEditText"
+                android:layout_width="250dp"
+                android:layout_height="53dp"
+                android:layout_below="@id/forsquareRelative"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="10dp"
+                android:hint="Farklı bir konum ekleyin"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="15sp"
+                android:visibility="gone" />
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/bulunamayanEditText"
+                android:inputType="textPersonName"
+                android:hint="@string/baslik" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText4"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:layout_marginStart="18dp"
+                android:textColor="@color/Cyan6"
+                android:text="@string/post_kategorisi" />
+            <LinearLayout
+                android:id="@+id/spinnerLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/textView17"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="textStart"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/round_button"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/experianceLineer"
+                android:layout_below="@id/spinnerLinear"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText15"
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_alignBottom="@+id/extraUploadRelative"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/edit_text_border"
+                    android:gravity="top"
+                    android:hint="@string/deneyimini_paylas"
+                    android:paddingEnd="10dp"
+                    android:focusable="true"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/experianceLineer"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/input_login"
+                android:text="@string/ek_icerik" />
+            <RelativeLayout
+                android:id="@+id/extraUploadRelative"
+                android:layout_width="match_parent"
+                android:layout_below="@id/textView16"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/upload_icon"
+                    />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/transparent"
+                    android:scaleType="fitCenter"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/extraUploadRelative"
+                android:layout_marginTop="20dp">
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+                    android:text="@string/yukle"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:theme="@style/LoginButton" />
+                <ProgressBar
+                    android:id="@+id/UploadProgressBar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignEnd="@id/button4"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="3dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

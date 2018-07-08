@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context=".Post.PostUpadate">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/upld_relative"
+            android:layout_width="match_parent"
+            android:background="#F5F5F5"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_ilk_resim"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/bGrey1"
+                />
+
+            <EditText
+                android:id="@+id/upld_baslik"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/imageView_ilk_resim"
+                android:layout_alignParentStart="true"
+                android:text="@string/baslik"
+                android:background="#60000000"
+                android:textColor="@color/white"
+                android:paddingTop="7dp"
+                android:paddingLeft="5dp"
+                android:textSize="18sp" />
+            <RelativeLayout
+                android:id="@+id/upld_forsquareRelative"
+                android:layout_width="275dp"
+                android:layout_height="52dp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/upld_baslik"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/upld_textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/icerik_konumu"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/upld_pickUpTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/konum_degistir"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/upld_imageView"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="10dp"
+                    mapbox:srcCompat="@android:drawable/ic_search_category_default" />
+                <ImageView
+                    android:id="@+id/upld_imageView_clear"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    mapbox:srcCompat="@android:drawable/ic_delete" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/upld_help_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/upld_forsquareRelative"
+                android:layout_below="@id/imageView_ilk_resim"
+                android:layout_marginTop="20dp"
+                mapbox:srcCompat="@android:drawable/ic_menu_help" />
+
+            <EditText
+                android:id="@+id/bulunamayanEditText_update"
+                android:layout_width="250dp"
+                android:layout_height="53dp"
+                android:layout_below="@id/upld_forsquareRelative"
+                android:layout_centerHorizontal="false"
+                android:layout_marginStart="10dp"
+                android:hint="@string/farkli_konum_ekle"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="15sp"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/upld_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/bulunamayanEditText_update"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/icerik_kategorisi"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/upld_p_kategori"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/bulunamayanEditText_update"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/upld_kategori"
+                android:text="@string/post_kategorisi"/>
+            <LinearLayout
+                android:id="@+id/upld_spinnerLinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="150dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/upld_kategori"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/upld_spinner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="textStart"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/upld_button14"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/upld_genel_bakis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_below="@+id/upld_spinnerLinear"
+                android:layout_marginTop="19dp"
+                android:text="@string/genel_deneyimler"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/upld_deneyim"
+                android:layout_width="360dp"
+                android:layout_height="180dp"
+                android:layout_below="@+id/upld_genel_bakis"
+                android:layout_marginTop="12dp"
+                android:textSize="14sp"
+                android:gravity="top"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/edit_text_border"
+                android:text="@string/gelen_deneyimler" />
+
+            <TextView
+                android:id="@+id/upld_ek_icerik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/upld_deneyim"
+                android:layout_below="@+id/upld_deneyim"
+                android:layout_marginTop="32dp"
+                android:text="Ek içerik"
+                android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/extraUploadRelative2"
+            android:layout_width="match_parent"
+            android:layout_below="@id/upld_ek_icerik"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/upld_button6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/upload_icon"
+                />
+            <ImageView
+                android:id="@+id/upld_ikinci_resim"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:background="@color/bGrey1"
+                android:layout_marginTop="12dp"/>
+          </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/uploadButtonReltv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/extraUploadRelative2"
+                android:layout_marginTop="20dp">
+                <Button
+                    android:id="@+id/upld_button4"
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+                    android:text="@string/guncelle"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:theme="@style/LoginButton" />
+                <ProgressBar
+                    android:id="@+id/upld_UploadProgressBar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignEnd="@id/upld_button4"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="3dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

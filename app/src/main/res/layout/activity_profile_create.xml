@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinat"
+    android:background="@color/bGrey6"
+    tools:context="deneyimkutusu.xedoxsoft.deneyimkutusu.Login.RegisterScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/prlfcrt_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="280dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/profil_icerigi"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/bGrey2"
+                        android:scaleType="fitCenter"
+                        />
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/profil_resmi"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/bGrey4"
+                    android:ems="10"
+                    android:hint="@string/isimisim"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/soyisimEditText"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/bGrey4"
+                    android:ems="10"
+                    android:hint="@string/soyisim"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center">
+                    <EditText
+                        android:id="@+id/editText6"
+                        android:layout_width="280dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@color/bGrey4"
+                        android:ems="10"
+                        android:hint="@string/ulke"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white" />
+                    <Button
+                        android:id="@+id/create_konum"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="230dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/location2"
+                        />
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/editText7"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/bGrey4"
+                    android:ems="10"
+                    android:hint="@string/sehir"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+                <RelativeLayout
+                    android:id="@+id/prlf_uploadButtonReltv"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/profileOlBtn"
+                        android:layout_width="280dp"
+                        android:layout_height="60dp"
+                        android:text="@string/olustur"
+                        android:textColor="@color/white"
+                        android:theme="@style/LoginButton" />
+                    <ProgressBar
+                        android:id="@+id/prflcr_UploadProgressBar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignEnd="@id/profileOlBtn"
+                        android:layout_marginEnd="20dp"
+                        android:layout_centerVertical="true"
+                        android:elevation="3dp"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@android:color/white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

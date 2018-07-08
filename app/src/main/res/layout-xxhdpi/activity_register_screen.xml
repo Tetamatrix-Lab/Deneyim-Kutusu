@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constRegister"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context="deneyimkutusu.xedoxsoft.deneyimkutusu.Login.RegisterScreen">
+
+    <RelativeLayout
+        android:id="@+id/RegisterRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/registerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="280dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/kayit_ol"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/editText3"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/input_register_bg"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/input_register_bg"
+                    android:ems="10"
+                    android:hint="@string/sifre"
+                    android:inputType="textPassword"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <RelativeLayout
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/LoginProgressBar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="23dp"
+                        android:elevation="3dp"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/white"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/kaydol"
+                        android:layout_width="280dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/kaydol"
+                        android:textColor="@color/white"
+                        android:theme="@style/LoginButton" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/alreadyRegisterScreenBtn2"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/sifrenimi_unuttun"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/alreadyRegisterScreenBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/zaten_uye"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

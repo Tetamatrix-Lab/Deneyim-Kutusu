@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <!--Purple color-->
+    <color name="purple0">#9C27B0</color>
+    <color name="purple1">#AB47BC</color>
+    <color name="purple2">#9C27B0</color>
+    <color name="purple3">#8E24AA</color>
+    <color name="purple4">#7B1FA2</color>
+    <color name="purple5">#6A1B9A</color>
+    <color name="purple6">#4A148C</color>
+    <!--Deap purple colors-->
+    <color name="dpurple0">#673AB7</color>
+    <color name="dpurple5">#673AB7</color>
+    <color name="dpurple1">#5E35B1</color>
+    <color name="dpurple2">#512DA8</color>
+    <color name="dpurple3">#4527A0</color>
+    <color name="dpurple4">#311B92</color>
+    <!--Indigo color-->
+    <color name="indigo6">#304FFE</color>
+    <color name="indigo0">#3F51B5</color>
+    <color name="indigo1">#5C6BC0</color>
+    <color name="indigo2">#3F51B5</color>
+    <color name="indigo3">#3949AB</color>
+    <color name="indigo4">#303F9F</color>
+    <color name="indigo5">#283593</color>
+    <!--Blue color-->
+    <color name="blue0">#2196F3</color>
+    <color name="blue1">#42A5F5</color>
+    <color name="blue2">#1E88E5</color>
+    <color name="blue3">#1565C0</color>
+    <color name="blue4">#0D47A1</color>
+    <color name="blue5">#448AFF</color>
+    <color name="blue6">#2962FF</color>
+    <!--Light blue-->
+    <color name="lightblue0">#03A9F4</color>
+    <color name="lightblue1">#81D4FA</color>
+    <color name="lightblue2">#4FC3F7</color>
+    <color name="lightblue3">#29B6F6</color>
+    <color name="lightblue4">#2962FF</color>
+    <color name="lightblue5">#039BE5</color>
+    <color name="lightblue6">#0288D1</color>
+    <color name="lightblue7">#0277BD</color>
+    <color name="lightblue8">#01579B</color>
+    <color name="lightblue9">#0091EA</color>
+    <!--Cyan color-->
+    <color name="Cyan0">#00BCD4</color>
+    <color name="Cyan1">#26C6DA</color>
+    <color name="Cyan2">#00BCD4</color>
+    <color name="Cyan3">#00ACC1</color>
+    <color name="Cyan4">#0097A7</color>
+    <color name="Cyan5">#00838F</color>
+    <color name="Cyan6">#006064</color>
+    <color name="Cyan7">#00B8D4</color>
+    <!--Teal color-->
+    <color name="Teal0">#009688</color>
+    <color name="Teal1">#26A69A</color>
+    <color name="Teal2">#009688</color>
+    <color name="Teal3">#00897B</color>
+    <color name="Teal4">#00796B</color>
+    <color name="Teal5">#00695C</color>
+    <color name="Teal6">#00BFA5</color>
+    <!--Blue grey color-->
+    <color name="bGrey0">#607D8B</color>
+    <color name="bGrey1">#78909C</color>
+    <color name="bGrey2">#607D8B</color>
+    <color name="bGrey3">#546E7A</color>
+    <color name="bGrey4">#455A64</color>
+    <color name="bGrey5">#37474F</color>
+    <color name="bGrey6">#263238</color>
+
+    <!--Red colors-->
+    <color name="Red0">#F44336</color>
+    <color name="Red1">#EF5350</color>
+    <color name="Red2">#F44336</color>
+    <color name="Red3">#E53935</color>
+    <color name="Red4">#D32F2F</color>
+    <color name="Red5">#C62828</color>
+
+
+    <!--Tezde kullandıklarım-->
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorIndigo">#D81B60</color>
+    <color name="LoginScreenBackground">#2E3237</color>
+    <color name="editTextActivated">#ffffff</color>
+    <color name="editTextHighlight">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="white_white">#ffffff</color>
+    <color name="editTextClick">#3b4148</color>
+    <color name="borderColor">#2E3237</color>
+
+    <!--firebase login için-->
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="blur">#80FFFFFF</color>
+    <color name="btn_logut_bg">#ff6861</color>
+</resources>

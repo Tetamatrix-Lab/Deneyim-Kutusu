@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bGrey5</item>
+        <item name="colorPrimaryDark">@color/bGrey6</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme2.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bGrey5</item>
+        <item name="colorPrimaryDark">@color/bGrey6</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--No actionbar-->
+    <style name="AppTheme.NoActionBar">
+        <item name="coordinatorLayoutStyle">@style/Widget.Design.CoordinatorLayout</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Dark application theme. -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/bGrey5</item>
+        <item name="colorPrimaryDark">@color/bGrey6</item>
+    </style>
+
+    <!-- Custom Button teması tanımlama-->
+    <style name="LoginButton" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlHighlight">@color/colorIndigo</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--popmenu-->
+    <style name="AppTheme.popupMenuTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+</resources>

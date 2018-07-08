@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageViewDrawer_kapak_post"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@color/bg_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <ImageView
+            android:id="@+id/postDrawerProfile"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="left"
+            android:paddingStart="5dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/textViewDrawer_isim_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:layout_gravity="left"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/isim_soyisim"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewDrawer_rutbe_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingStart="8dp"
+            android:text="@string/rutbe"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

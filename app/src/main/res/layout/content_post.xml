@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="deneyimkutusu.xedoxsoft.deneyimkutusu.Post.PostActivity"
+    tools:showIn="@layout/app_bar_post">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_content_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:id="@+id/content_post_relative"
+            android:layout_width="match_parent"
+            android:background="#F5F5F5"
+            android:layout_height="700dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/bGrey1" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/imageView6"
+                android:layout_alignParentStart="true"
+                android:text="@string/baslik"
+                android:background="#60000000"
+                android:textColor="@color/white"
+                android:paddingTop="7dp"
+                android:paddingLeft="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView6"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/kategori_alt_kategori"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView6"
+                android:layout_below="@+id/textView6"
+                android:layout_marginTop="19dp"
+                android:text="@string/genel_deneyimler"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView7"
+                android:layout_below="@+id/textView7"
+                android:paddingRight="10dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/gelen_deneyimler" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView12"
+                android:layout_below="@+id/textView12"
+                android:layout_marginTop="32dp"
+                android:text="@string/ek_icerik"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView13"
+                android:layout_marginTop="11dp"
+                android:background="@color/bGrey1" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView7"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/yol_tarifi"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView14"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/navigation"
+                android:textColor="@color/white_white"
+                android:theme="@style/LoginButton" />
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button2"
+                android:paddingEnd="0dp"
+                android:paddingStart="5dp"
+                android:text="@string/yorumlar"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/card_recycler_view_post"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/button2"
+                android:layout_marginTop="10dp"
+                android:clipChildren="false"
+                android:layoutAnimation="@anim/layout_animation_slide_right"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/content_post_linear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="0dp"
+        android:background="#ECEFF1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="244dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_rounded"
+            android:ems="10"
+            android:hint="@string/yorumunuz"
+            android:inputType="textPersonName"
+            android:paddingEnd="0dp"
+            android:paddingStart="10dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/white_white"
+            android:background="@drawable/send_icon"
+            android:theme="@style/LoginButton" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

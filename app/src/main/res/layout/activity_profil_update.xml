@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/LoginScreenBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical">
+        <RelativeLayout
+            android:id="@+id/profileRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/kapak_update"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:background="@color/bGrey2"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageView
+                android:id="@+id/profil_img_update"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="160dp"
+                android:scaleType="fitCenter"
+                tools:ignore="VectorDrawableCompat" />
+            <EditText
+                android:id="@+id/isim_updt"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/profil_img_update"
+                android:background="@color/editTextClick"
+                android:ems="10"
+                android:hint="@string/isimisim"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/soyisim_uptd"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@color/editTextClick"
+                android:ems="10"
+                android:hint="@string/soyisim"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/isim_updt"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+            <RelativeLayout
+                android:id="@+id/uptl_rltv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/soyisim_uptd"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/ulke_uptd"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@color/editTextClick"
+                    android:ems="10"
+                    android:hint="@string/ulke"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+                <Button
+                    android:id="@+id/create_konum_uplt"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="230dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/location2"
+                    />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/sehir_updt"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/uptl_rltv"
+                android:background="@color/editTextClick"
+                android:ems="10"
+                android:hint="@string/sehir"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+            <RelativeLayout
+                android:id="@+id/uploadButtonReltvUpld"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/sehir_updt"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/prl_uptl_button"
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+                    android:text="@string/guncelle"
+                    android:textColor="@color/white"
+                    android:theme="@style/LoginButton" />
+                <ProgressBar
+                    android:id="@+id/upld_prlf_progress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignEnd="@id/prl_uptl_button"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="3dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_delete_acount"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/kapak_update"
+                android:layout_toEndOf="@id/profil_img_update"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/transparent"
+                android:textColor="@color/white"
+                android:text="@string/hesabi_kaldir" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
