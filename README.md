@@ -13,7 +13,7 @@
 ---
 ##### Ekran görüntüsü
 
-<img src="https://github.com/erdemgencoglu/Deneyim-Kutusu/blob/master/gif/ic_launcher.png" width="48">
+<h1>Deneyim Kutusu<img src="https://github.com/erdemgencoglu/Deneyim-Kutusu/blob/master/gif/ic_launcher.png" width="48"></h1>
 <img src="https://github.com/erdemgencoglu/Deneyim-Kutusu/blob/master/gif/gif.gif" width="250" height="450">
 
 
