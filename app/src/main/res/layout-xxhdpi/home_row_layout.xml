@@ -92,14 +92,14 @@
 
         <TextView
             android:id="@+id/textView19"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:singleLine="true"
             android:layout_alignBaseline="@+id/textView15"
             android:layout_alignBottom="@+id/textView15"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="20dp"
+            android:maxLines="1"
+            android:singleLine="true"
             android:text="@string/tarih" />
         <TextView
             android:id="@+id/textView_location"

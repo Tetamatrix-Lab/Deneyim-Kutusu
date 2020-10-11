@@ -62,8 +62,8 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
 
     //Foursqaure api için gerekli olan nesnelerimiz ve değişkenlerimiz
     private TextView pickupLocation;
-    public static final String FOURSQUARE_CLIENT_KEY = "";
-    public static final String FOURSQUARE_CLIENT_SECRET = "";
+    public static final String FOURSQUARE_CLIENT_KEY = "I4KGN51TLDRF1PES3KJPY3JGMQREHZA4JGNE3WSH3PS1ZGQE";
+    public static final String FOURSQUARE_CLIENT_SECRET = "EYL5PMDNSUG2F5UKBFYF0QCZ0KOGRLAYVJVNVQOZEZ2SXOXL";
     private ProgressBar progressBar;
     Button yukle;
     Button kategoriEkle;

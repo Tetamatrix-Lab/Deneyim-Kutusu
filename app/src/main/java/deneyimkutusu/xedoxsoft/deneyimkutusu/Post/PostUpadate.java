@@ -67,8 +67,8 @@ public class PostUpadate extends AppCompatActivity implements LocationListener{
     TextView post_kategori_text;
     Button ekresim;
 
-    public static final String FOURSQUARE_CLIENT_KEY = "";
-    public static final String FOURSQUARE_CLIENT_SECRET = "";
+    public static final String FOURSQUARE_CLIENT_KEY = "I4KGN51TLDRF1PES3KJPY3JGMQREHZA4JGNE3WSH3PS1ZGQE";
+    public static final String FOURSQUARE_CLIENT_SECRET = "EYL5PMDNSUG2F5UKBFYF0QCZ0KOGRLAYVJVNVQOZEZ2SXOXL";
     LocationManager locationManager;
     DatabaseReference yazilar;
     DatabaseReference kategoriler;
