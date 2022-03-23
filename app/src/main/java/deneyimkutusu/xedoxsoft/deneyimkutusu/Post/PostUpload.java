@@ -1,8 +1,10 @@
 package deneyimkutusu.xedoxsoft.deneyimkutusu.Post;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -11,6 +13,8 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -89,7 +93,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
     Calendar cal = Calendar.getInstance();
     DateFormat sdf = new SimpleDateFormat("MM.dd.yyyy");
     String secilen_kategori;
-    String location="";
+    String location = "";
     String Storage_Path = "Yazi_Resimleri/";
     String resims2_snapshot_url = "null";
     String kul_id;
@@ -97,14 +101,16 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
     String kul_soyadi;
     String kul_profil_resim;
     String yazilar_id;
-    String ulke_b="";
-    String sehir_b="";
+    String ulke_b = "";
+    String sehir_b = "";
     String enlem;
     String boylam;
     int resim_flag = 0; //2.resim boş bırakılabilir bayrak değişkeni
     int incelem_s;
     int uploadFlag = 0;
-    int konum_bul_basilma=0;
+    int konum_bul_basilma = 0;
+    final private int GPSONAY_KODU = 1234;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -176,7 +182,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                     UserModel profil = new UserModel();
                     profil = dataSnapshot.getValue(UserModel.class);
                     kul_adi = "" + profil.getIsim();
-                    kul_soyadi=""+profil.getSoyisim();
+                    kul_soyadi = "" + profil.getSoyisim();
                     kul_profil_resim = profil.getResimUrl();
                     incelem_s = Integer.parseInt(profil.getInceleme_sayisi());
                 }
@@ -188,7 +194,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
             };
             databaseKullanici.addValueEventListener(kullanicEvent);
         } else {
-            Toast.makeText(PostUpload.this,R.string.kullanicibilgisi_cekilemedi, Toast.LENGTH_LONG).show();
+            Toast.makeText(PostUpload.this, R.string.kullanicibilgisi_cekilemedi, Toast.LENGTH_LONG).show();
         }
         databaseReferenceYazilar = FirebaseDatabase.getInstance().getReference("Yazilar");
         pickupLocation.setOnClickListener(new View.OnClickListener() {
@@ -200,7 +206,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                 bulunamayan_edit.setVisibility(View.GONE);
                 foursquare_search.setVisibility(View.GONE);
                 foursquare_delete.setVisibility(View.VISIBLE);
-                konum_bul_basilma=1;
+                konum_bul_basilma = 1;
             }
         });
         foursquare_delete.setOnClickListener(new View.OnClickListener() {
@@ -209,7 +215,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                 foursquare_delete.setVisibility(View.GONE);
                 foursquare_search.setVisibility(View.VISIBLE);
                 pickupLocation.setText("");
-                location="";
+                location = "";
             }
         });
         yazi_resmi.setOnClickListener(new View.OnClickListener() {
@@ -219,8 +225,8 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                CropImage.activity().setActivityTitle(""+getString(R.string.crop_baslik))
-                        .setCropMenuCropButtonTitle(""+getString(R.string.crop_onayla))
+                CropImage.activity().setActivityTitle("" + getString(R.string.crop_baslik))
+                        .setCropMenuCropButtonTitle("" + getString(R.string.crop_onayla))
                         .setGuidelines(CropImageView.Guidelines.ON)
                         .start(PostUpload.this);
             }
@@ -228,13 +234,13 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
         help_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (konum_bul_basilma==1){
+                if (konum_bul_basilma == 1) {
                     bulunamayan_edit.setVisibility(View.VISIBLE);
-                    if (bulunamayan_edit.getText().length()>0){
+                    if (bulunamayan_edit.getText().length() > 0) {
                         pickupLocation.setText(bulunamayan_edit.getText().toString());
-                        location=bulunamayan_edit.getText().toString();
+                        location = bulunamayan_edit.getText().toString();
                     }
-                }else{
+                } else {
                     Toast.makeText(PostUpload.this, R.string.konum_bulmayi_dene, Toast.LENGTH_SHORT).show();
                 }
             }
@@ -244,7 +250,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 view.getParent().requestDisallowInterceptTouchEvent(true);
-                switch (motionEvent.getAction() & MotionEvent.ACTION_MASK){
+                switch (motionEvent.getAction() & MotionEvent.ACTION_MASK) {
                     case MotionEvent.ACTION_UP:
                         view.getParent().requestDisallowInterceptTouchEvent(false);
                         break;
@@ -261,8 +267,8 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                CropImage.activity().setActivityTitle(""+getString(R.string.crop_baslik))
-                        .setCropMenuCropButtonTitle(""+getString(R.string.crop_onayla))
+                CropImage.activity().setActivityTitle("" + getString(R.string.crop_baslik))
+                        .setCropMenuCropButtonTitle("" + getString(R.string.crop_onayla))
                         .setGuidelines(CropImageView.Guidelines.ON)
                         .start(PostUpload.this);
             }
@@ -281,10 +287,10 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
         yukle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (yazi_baslik.getText().toString().equals(null)){
+                if (yazi_baslik.getText().toString().equals(null)) {
                     yazi_baslik.setText("");
                 }
-                if (yazi_baslik.getText().length()>0&&yazi_icerik.getText().length()>0&&pickupLocation.getText().length()>0||bulunamayan_edit.getText().length()>0){
+                if (yazi_baslik.getText().length() > 0 && yazi_icerik.getText().length() > 0 && pickupLocation.getText().length() > 0 || bulunamayan_edit.getText().length() > 0) {
                     if (auth.getCurrentUser() != null) {
                         //2.resmin seçilip seçilmediği
                         if (FilePathUri2 != null) {
@@ -305,8 +311,8 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                             UploadImageFileToFirebaseStorage();//İkinci resim seçilmedi ise direk upload
                         }
                     }
-                }else{
-                    Snackbar.make(view,R.string.snackbar_update, Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                } else {
+                    Snackbar.make(view, R.string.snackbar_update, Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 }
 
             }
@@ -325,11 +331,65 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
     }
 
     void getLocation() {
-        try {
-            locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, this);
-        } catch (SecurityException e) {
-            e.printStackTrace();
+        checkMapPermission();
+
+    }
+
+    LocationListener locationListener = new LocationListener() {
+        @Override
+        public void onLocationChanged(Location location) {
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+        }
+
+        @Override
+        public void onProviderEnabled(String provider) {
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+        }
+    };
+
+    void checkMapPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                Toast.makeText(this, "Bu özelliği kullanabilmek için konum izni vermelisiniz.!", Toast.LENGTH_LONG).show();
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, GPSONAY_KODU);
+            } else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, GPSONAY_KODU);
+            }
+        } else {
+            try {
+                locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, this);
+            } catch (SecurityException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case GPSONAY_KODU: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    try {
+                        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, this);
+                    } catch (SecurityException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    Toast.makeText(this, "Bu özelliği kullanabilmek için konum izni vermelisiniz.!", Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 
@@ -338,23 +398,23 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
         final String yazi_i = yazi_icerik.getText().toString();
         final String currentTime = sdf.format(cal.getTime());
         yazilar_id = databaseReferenceYazilar.push().getKey();//Yazilar için unique id olşturur.
-        if (FilePathUri != null) {
+        if (FilePathUri != null || FilePathUri2 != null) {
             StorageReference storageReference2nd = storageReference.child(Storage_Path + System.currentTimeMillis() + "." + "jpg");
-            storageReference2nd.putFile(FilePathUri)
+            storageReference2nd.putFile(FilePathUri == null ? FilePathUri2 : FilePathUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             DataClass dataUploadInfo = new DataClass("" + yazilar_id, "" + kul_id, "" + secilen_kategori,
-                                    "" + kul_soyadi,""+kul_adi, "" +ulke_b,""+sehir_b, "" + currentTime, "" + 0,
+                                    "" + kul_soyadi, "" + kul_adi, "" + ulke_b, "" + sehir_b, "" + currentTime, "" + 0,
                                     "" + 0, "" + 0, "" + yazi_b, "" + yazi_i, "" + taskSnapshot.getDownloadUrl().toString(),
-                                    "" + resims2_snapshot_url, "" + kul_profil_resim, "" + enlem, "" + boylam, location+" " + "" + bulunamayan_edit.getText().toString());
+                                    "" + resims2_snapshot_url, "" + kul_profil_resim, "" + enlem, "" + boylam, location + " " + "" + bulunamayan_edit.getText().toString());
                             if (auth.getCurrentUser() != null) {
                                 databaseReferenceYazilar.child(yazilar_id).setValue(dataUploadInfo);// Adding image upload id s child element into databaseReference.
                                 incelem_s = incelem_s + 1;
                                 databaseKullanici.child("inceleme_sayisi").setValue("" + incelem_s);
                                 uploadFlag = 1;
                                 if (uploadFlag == 1) {
-                                    Toast.makeText(getApplicationContext(),R.string.yaziniz_yuklendi, Toast.LENGTH_LONG).show();// Showing toast message after done uploading.
+                                    Toast.makeText(getApplicationContext(), R.string.yaziniz_yuklendi, Toast.LENGTH_LONG).show();// Showing toast message after done uploading.
                                     progressBar.setVisibility(View.GONE);
                                     uploadFlag = 0;
                                     finish();
@@ -376,7 +436,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                     });
         } else {
             progressBar.setVisibility(View.GONE);
-            Toast.makeText(this,R.string.ilkresim_bos, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.ilkresim_bos, Toast.LENGTH_SHORT).show();
             uploadFlag = 0;
         }
     }
@@ -398,7 +458,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
                     writeNewKategori(kat_id, getir.getText().toString());
                     dialog.cancel();
                 } else {
-                    Toast.makeText(PostUpload.this,R.string.dialog_kategori_bos, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PostUpload.this, R.string.dialog_kategori_bos, Toast.LENGTH_SHORT).show();
                     dialog.show();
                 }
             }
@@ -469,7 +529,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
 
     @Override
     public void onProviderDisabled(String provider) {
-        Toast.makeText(PostUpload.this,R.string.konum_servisi_kontrol, Toast.LENGTH_SHORT).show();
+        Toast.makeText(PostUpload.this, R.string.konum_servisi_kontrol, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -480,7 +540,7 @@ public class PostUpload extends AppCompatActivity implements LocationListener {
     @Override
     public void onProviderEnabled(String provider) {
         getLocation();
-        Toast.makeText(PostUpload.this,R.string.konum_bekleniyor, Toast.LENGTH_SHORT).show();
+        Toast.makeText(PostUpload.this, R.string.konum_bekleniyor, Toast.LENGTH_SHORT).show();
     }
 
 }
